@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -14,18 +13,19 @@ const PostCreate = () => {
 
     setTitle("");
   };
+
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div className='form-group'>
+        <div className="form-group">
           <label>Title</label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className='form-control'
+            className="form-control"
           />
         </div>
-        <button className='btn btn-primary'>Submit</button>
+        <button className="btn btn-primary">Submit</button>
       </form>
     </div>
   );
