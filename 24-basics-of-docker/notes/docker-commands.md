@@ -47,12 +47,18 @@
   - docker logs [container id]
 
 - Execute an additional command in a container
+
   - docker exec -it [container id] [command]
     - -it
       - Allow us to provide input to the container
 
 - Get shell access in a container
-  - docker exec -it [container id] sh
+
+  - docker [run/exec] -it [container id] sh
+
+- Build Dockerfile
+  - In project directory:
+    - docker build .
 
 ## Flags
 
@@ -70,3 +76,4 @@
 
 - -it
   - enables you to input text
+  - interactive
