@@ -9,6 +9,14 @@ Basically the OS
   - alpine
     - Lightweight base image of Alpine Linux (5mb)
 
+## Specify a working directory
+
+WORKDIR /usr/app
+
+### Copy files from current directory to the new currenty directory
+
+COPY ./ ./
+
 ## Download and install a dependency
 
 What programs you want
