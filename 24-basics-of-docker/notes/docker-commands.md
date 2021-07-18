@@ -57,11 +57,20 @@
   - docker [run/exec] -it [container id] sh
 
 - Build Dockerfile
+
   - In project directory:
     - docker build .
   - With a tag (name)
   - docker build -t [dockerId/package:version] .
     - docker build -t lyx0/redis:latest .
+
+- Manual image creation:
+  baseImage can be alpine for example
+
+  - docker run -it [baseImage] sh
+    - [do whatever in it]
+  - in new shell:
+    - docker commit -c 'CMD ["redis-server"]' [containerId]
 
 ## Flags
 
@@ -69,11 +78,16 @@
 
   - attach (shows output)
 
+- -c
+
+  - commit changes
+
 - -i
 
   - attach to STDIN
 
 - -t
+
   - makes sure all the text is nicely formatted and like normal
 
 - -it
