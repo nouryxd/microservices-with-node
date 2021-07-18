@@ -2,6 +2,7 @@ FROM node:alpine
  
 WORKDIR /usr/app
 
-RUN apk npm install
+COPY ./ ./ 
+RUN npm install
 
 CMD ["npm", "start"]
