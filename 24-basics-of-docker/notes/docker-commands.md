@@ -43,9 +43,30 @@
   - docker ps --all
 
 - Retrieve output logs
+
   - docker logs [container id]
+
+- Execute an additional command in a container
+  - docker exec -it [container id] [command]
+    - -it
+      - Allow us to provide input to the container
+
+- Get shell access in a container
+  - docker exec -it [container id] sh
 
 ## Flags
 
 - -a
+
   - attach (shows output)
+
+- -i
+
+  - attach to STDIN
+
+- -t
+
+  - makes sure all the text is nicely formatted and like normal
+
+- -it
+  - enables you to input text
