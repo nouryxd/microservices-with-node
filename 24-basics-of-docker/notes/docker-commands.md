@@ -72,6 +72,11 @@
   - in new shell:
     - docker commit -c 'CMD ["redis-server"]' [containerId]
 
+- Add port mapping
+  - first port is our own, second port is the containers port
+    - docker run -p [port] : [port] [containerId]
+    - docker run -p 8080:8080 lyx0/simpleweb
+
 ## Flags
 
 - -a
@@ -86,6 +91,10 @@
 
   - attach to STDIN
 
+- p
+  - Add port mapping
+  - first port is our own, second port is the containers port
+  - docker run -p [port]:[port] [containerId]
 - -t
 
   - makes sure all the text is nicely formatted and like normal
