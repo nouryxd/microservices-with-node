@@ -22,7 +22,24 @@ docker is a platform or ecosystem around creating and running containers.
 - Image:
 
   - Single file with all the deps and config required to run a program.
+  - File System snapshot.
 
 - Container:
 
   - Instance of an image. Runs a program.
+
+### Namespacing contains:
+
+- Processes
+- Hard Drive
+- Network
+- Users
+- Hostnames
+- Inter Process Communication
+
+### Control Groups (cgroups) contains:
+
+- Memory
+- CPU Usage
+- HD I/O
+- Network Bandwidth
