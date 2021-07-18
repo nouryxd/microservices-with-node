@@ -12,3 +12,17 @@
           v Get another error ------
 
 This is what Docker is trying to fix
+
+## What is Docker?
+
+docker is a platform or ecosystem around creating and running containers.
+
+## What is a container?
+
+- Image:
+
+  - Single file with all the deps and config required to run a program.
+
+- Container:
+
+  - Instance of an image. Runs a program.
