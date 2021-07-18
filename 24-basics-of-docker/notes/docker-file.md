@@ -12,6 +12,7 @@ Basically the OS
 ## Download and install a dependency
 
 What programs you want
+apk stands for Alpine Linux package manager (since we used Alpine Linux)
 
 - RUN apk add --update [image]
   - RUN apk add --update redis

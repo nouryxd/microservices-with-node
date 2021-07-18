@@ -59,6 +59,9 @@
 - Build Dockerfile
   - In project directory:
     - docker build .
+  - With a tag (name)
+  - docker build -t [dockerId/package:version] .
+    - docker build -t lyx0/redis:latest .
 
 ## Flags
 
@@ -71,7 +74,6 @@
   - attach to STDIN
 
 - -t
-
   - makes sure all the text is nicely formatted and like normal
 
 - -it
