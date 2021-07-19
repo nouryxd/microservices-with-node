@@ -11,6 +11,19 @@ Kubernetes is a tool for running a bunch of different containers. We give it som
     - minikube start
     - kubectl version
 
+## Terminology
+
+- Kubernetes Cluster:
+  - A collection of nodes + a master to manage them
+- Node:
+  - A virtual machine that will run our containers
+- Pod:
+  - More or less a running container. technically, a pod can run multiple containers.
+- Deployment:
+  - Monitors a set of pods, makes sure they are running and restarts them if they crash.
+- Service:
+  - Provides an easy-to-remembered URL to access a running container.
+
 ## Tour of Kubernetes
 
 1. Create a new docker Image from the service.
