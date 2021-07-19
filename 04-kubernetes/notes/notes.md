@@ -47,6 +47,7 @@ Kubernetes is a tool for running a bunch of different containers. We give it som
 
 - /infra/k8s/posts.yaml
 
+      apiVersion: v1
       kind: Pod
       metadata:
         name: posts
@@ -56,6 +57,25 @@ Kubernetes is a tool for running a bunch of different containers. We give it som
             image: lyx0/posts:0.0.1
             imagePullPolicy: Never
 
+### Config File Overview
+
+- apiVersion: v1
+  - K8s is extensible - we can add in our own custom objects. This specifies the set of objects we want K8s to look at
+- kind: Pod
+  - The type of object we want to create
+- metadata:
+  - Config options for the object we are about to create
+- name: posts
+  - When the pod is created, give it a name of 'posts'
+- spec:
+  - The exact attributes we want to apply to the object we are about to create
+- containers:
+  - We can create many containers in a single pod
+- name: posts
+  - Make a container with the name of 'posts'
+- image: lyx0/posts:0.0.1
+  - The exact image we want to use
+
 ### Use config file
 
       kubectl apply -f posts.yaml
@@ -63,7 +83,7 @@ Kubernetes is a tool for running a bunch of different containers. We give it som
       Output:
         pod/posts created
 
-### Minikube Commmands
+### Minikube Build Config Commmands
 
 Minikube Users:
 
