@@ -42,3 +42,52 @@ Kubernetes is a tool for running a bunch of different containers. We give it som
 - We can create Objects without config files (don't do this). Config files provide a precise definition of what your cluster is running.
   - Kubernetes docs will tell you to run direct commands to create objects - only do this for testing purposes.
   - Blog posts will tell you to run direct commands to create objects - close the blog post, don't do this.
+
+## Example config file
+
+- /infra/k8s/posts.yaml
+
+      kind: Pod
+      metadata:
+        name: posts
+      spec:
+        containers:
+          - name: posts
+            image: lyx0/posts:0.0.1
+            imagePullPolicy: Never
+
+### Use config file
+
+      kubectl apply -f posts.yaml
+      ----------------------------
+      Output:
+        pod/posts created
+
+### Minikube Commmands
+
+Minikube Users:
+
+If you are using a vm driver, you will need to tell Kubernetes to use the Docker daemon running inside of the single node cluster instead of the host.
+
+Run the following command:
+
+`eval $(minikube docker-env)`
+
+Note - This command will need to be repeated anytime you close and restart the terminal session.
+
+Afterward, you can build your image:
+
+`docker build -t USERNAME/REPO . `
+
+Update, your pod manifest as shown above and then run:
+
+`kubectl apply -f infra/k8s/`
+
+https://minikube.sigs.k8s.io/docs/commands/docker-env/
+
+## Commands
+
+- Show all Pods in Cluster
+  - `kubectl get pods`
+- Delete
+  - `kubectl delete -f infra/k8s/`
