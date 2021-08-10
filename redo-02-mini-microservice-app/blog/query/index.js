@@ -20,7 +20,7 @@ app.post('/events', (req, res) => {
 
     posts[id] = { id, title, comments: [] };
   }
-
+ 
   if (type === 'CommentCreated') {
     const { id, content, postId } = data;
 
@@ -34,5 +34,5 @@ app.post('/events', (req, res) => {
 });
 
 app.listen(4002, () => {
-  console.log('Listening on 4002');
+  console.log('[Query] Listening on 4002');
 });
